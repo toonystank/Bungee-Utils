@@ -54,8 +54,9 @@ public class ItemBuilder extends ItemStack {
         return this;
     }
     public ItemBuilder formatColor() {
-        this.displayName(ChatColor.translateAlternateColorCodes('&', this.displayName()));
-        this.lore().forEach(lore -> this.lore().add(ChatColor.translateAlternateColorCodes('&', (String) lore)));
+        this.displayName(ChatColor.translateAlternateColorCodes('&', this.displayName));
+        this.lore.forEach(lore -> this.lore.add(ChatColor.translateAlternateColorCodes('&', lore)));
+        this.setLore(this.lore);
         return this;
     }
     public ItemStack getItemStack() {

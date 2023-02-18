@@ -7,6 +7,7 @@ import dev.simplix.protocolize.api.inventory.Inventory;
 import dev.simplix.protocolize.api.player.ProtocolizePlayer;
 import lombok.Getter;
 import lombok.Setter;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.*;
@@ -84,6 +85,7 @@ public class GUIData {
      * @return the parsed text
      */
     private String parse(String text) {
+        text = ChatColor.translateAlternateColorCodes('&', text);
         return text.replace("%player%", proxiedPlayer.getName());
     }
 

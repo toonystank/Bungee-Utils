@@ -3,15 +3,15 @@ package com.toonystank.bungeeutils.utils;
 import com.toonystank.bungeeutils.BungeeUtils;
 import com.toonystank.bungeeutils.utils.config.ConfigManager;
 
-import java.util.List;
 import java.util.Set;
 
 public class MainConfig extends ConfigManager {
 
-    private BungeeUtils plugin;
+    private final BungeeUtils plugin;
 
     public MainConfig(BungeeUtils plugin) throws Exception {
         super(plugin, "config.yml", false, true);
+        this.plugin = plugin;
     }
 
     public String getPrefix() {
@@ -54,7 +54,7 @@ public class MainConfig extends ConfigManager {
         return this.getString("gui." + guiName + ".file");
     }
     public boolean isGuiEnabled(String guiName) {
-        return this.getBoolean("gui." + guiName + ".enabled");
+        return this.getBoolean("gui." + guiName + ".enable");
     }
 
 }
