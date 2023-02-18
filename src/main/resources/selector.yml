@@ -1,0 +1,50 @@
+data:
+  menu_title: "%gpextention_title% &7(&2/ᴄʟᴀɪᴍʟɪꜱᴛ&7)"
+  inventory_type: CHEST
+  open_command:
+    - selector
+    - server
+    - serverselector
+    - connect
+    - join
+  args:
+    - serverName
+items:
+  BACKGROUND_2:
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 18
+      - 27
+      - 26
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 44
+      - 35
+      - 36
+      - 26
+      - 17
+    display_name: ' &r  '
+  goback:
+    material: OAK_DOOR
+    display_name: "&7⟰ &aɢᴏ ʙᴀᴄᴋ"
+    click_commands:
+      - "[sound] BLOCK_WOODEN_DOOR_OPEN"
+      - "[player] deluxemenus:claim"
+    slot: 45

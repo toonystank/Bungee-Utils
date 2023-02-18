@@ -1,0 +1,22 @@
+message:
+  prefix: '&8[&6&lTest&8] &7'
+  no_permission: '&cYou do not have permission to use this command.'
+  reload: '&aReloaded the config.'
+
+# Ip limit
+ip-limit:
+  player-limit: 1
+  enabled: true
+  bypass-permission: "bungeeutils.joinbypass"
+  message:
+    kick: "You have reached the maximum amount of accounts allowed on this IP address."
+    remove_alt: "Removed alt account from IP limit."
+    main_account: "The main account of %player% is %main%."
+    alt_account: "The alts of %player% are %alts%."
+    no_alt: "No alts found for %player%."
+
+gui:
+  1:
+    file: "selector.yml"
+    enable: true
+

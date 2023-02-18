@@ -1,0 +1,4 @@
+name: BungeeUtils
+version: '${project.version}'
+main: com.toonystank.bungeeutils.BungeeUtils
+description: Utils plugin for bungeecord setup
