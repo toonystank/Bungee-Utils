@@ -38,7 +38,7 @@ public class GUIData {
         this.proxiedPlayer = Objects.requireNonNull(player, "player cannot be null");
         this.protocolizePlayer = Protocolize.playerProvider().player(player.getUniqueId());
         this.parsedSections = new HashMap<>();
-        this.parsedTitle = parse(gui.getTitle());
+        this.parsedTitle = parse(gui.getGuiCache().getTitle());
         this.inventory = inventory;
         parseSections();
     }
@@ -65,10 +65,10 @@ public class GUIData {
      * Parses the GUI sections and replaces any occurrences of "%player%" with the player's name.
      */
     private void parseSections() {
-        gui.getSlotMap().forEach((slot, item) -> {
-            GUISection section = gui.getSectionMap().get(item);
+        gui.getGuiCache().getSlotMap().forEach((slot, item) -> {
+            GUISection section = gui.getGuiCache().getSectionMap().get(item);
             if (section != null) {
-                GUISection parsedSection = this.gui.getSectionMap().get(item);
+                GUISection parsedSection = gui.getGuiCache().getSectionMap().get(item);
                 parsedSection.setLore(parseLines(section.getLore()));
                 parsedSection.setDisplayName(parse(section.getDisplayName()));
                 parsedSection.setClickCommands(parseLines(section.getClickCommands()));
